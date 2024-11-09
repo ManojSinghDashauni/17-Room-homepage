@@ -1,0 +1,260 @@
+:root {
+    --color-Dark-Gray: hsl(0, 0%, 63%);
+    --color-Black: hsl(0, 0%, 0%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header{
+    position: absolute;
+    top:0;
+    display: flex;
+    padding: 75px;
+}
+.header__logo{
+    margin-right: 30px;
+    height: 16px;
+}
+
+.header__burger{
+    display: none;
+}
+
+.navigation{}
+.navigation__box{
+    display: flex;
+}
+.navigation__list{
+    list-style-type: none;
+}
+.navigation__link{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 16px;
+    text-transform: lowercase;
+    color: var(--color-White);
+}
+.navigation__link:hover{
+    border-bottom: 2px solid var(--color-White);
+}
+
+.closebtn{
+    display: none;
+}
+
+.main{
+    flex: 0 0 60%;
+}
+.slideshow-container{
+    display: flex;
+}
+.mySlides{
+    flex: 0 0 60%;
+}
+
+.mySlides__img{
+    width: 100%;
+}
+
+.mySlides__text{
+    flex: 0 0 40%;
+    padding: 150px 90px;
+}
+
+.heading-2{
+    font-size: 48px;
+    font-weight: 600;
+}
+.paragraph{
+    font-size: 16px;
+    /* font-weight: 500; */
+    color: var(--color-Dark-Gray);
+    margin-block:24px ;
+    line-height: 1.4;
+}
+
+.btn{
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: var(--color-Black);
+    background-color: transparent;
+}
+.btn:hover{
+    color: var(--color-Dark-Gray);
+}
+.btn__arrow{}
+
+.control{
+    position: absolute;
+    top: 69.9%;
+    right:31.7%;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control img{
+    height: 25px;
+    }
+.prev,.next{
+        padding: 22px;
+        background-color: var(--color-Black);
+}
+.next:hover{
+    background-color: var(--color-Dark-Gray);
+}
+
+.prev:hover{
+    background-color: var(--color-Dark-Gray);
+}
+
+.about{
+    display: flex;
+    flex: 0 0 40%;
+    margin-top: -3px;
+}
+.about__dark,.about__light{
+    flex: 0 0 30%;
+}
+.about__text{
+    flex: 1;
+    padding-inline:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heading-3{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+
+@media (max-width:375px) {
+    .slideshow-container{
+        flex-direction: column;
+    }
+    .mySlides{
+        flex:  1;
+    }
+    .mySlides__text{
+        flex: 1;
+        padding: 50px 30px;
+    }
+
+    .heading-2{
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .heading-3{
+        font-size: 16px;
+    }
+
+    .paragraph{
+        font-size: 16px;
+        /* font-weight: 500; */
+        color: var(--color-Dark-Gray);
+        margin-block:24px ;
+        line-height: 1.4;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-top: -3px;
+    }
+    .about__dark,.about__light{
+        flex:1;
+    }
+    .about__text{
+        flex: 1;
+        padding-inline:0px;
+        padding: 50px 30px;
+    }
+
+    .header{
+        position: absolute;
+        top:0;
+        display: flex;
+        padding: 50px 30px;
+    }
+    .header__logo{
+        margin-right: 0;
+        height: 16px;
+    }
+    .header__burger{
+        display: block;
+        margin-right: 100px;
+    }
+    
+    .navigation{
+        display: none;
+        background-color: var(--color-White);
+        color: var(--color-Black);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150%;
+        height: 75px;
+        padding: 50px 30px;
+    }
+    .navigation__box{
+        display: flex;
+    }
+    .navigation__list{
+        list-style-type: none;
+    }
+    .navigation__link{
+        color: var(--color-Black);
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+
+    .closebtn{
+        display: block;
+        margin-right: 30px;
+    }
+
+    .control{
+        top: 46%;
+        right:0;
+        background-color: black;
+    }
+    
+    .control img{
+        height: 20px;
+        }
+    .prev,.next{
+            padding: 16px;
+    }
+    
+    
+}
